@@ -1,0 +1,254 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+
+    <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet" />
+    <link href="{% static 'css/first.css' %}" rel="stylesheet" />
+
+    <title>{% block title %} {% endblock title %}</title>
+  </head>
+
+  <body>
+    <img src="{% static 'images/header.jpg' %}" class="img-fluid" alt="Header" />
+    <nav class="navbar navbar-expand-lg navbar-new">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+          aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation"
+          style="background-color: white">
+          <!-- <span class="navbar-toggler-icon"></span> -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-toggles"
+            viewBox="0 0 16 16">
+            <path
+              d="M4.5 9a3.5 3.5 0 1 0 0 7h7a3.5 3.5 0 1 0 0-7h-7zm7 6a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5zm-7-14a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zm2.45 0A3.49 3.49 0 0 1 8 3.5 3.49 3.49 0 0 1 6.95 6h4.55a2.5 2.5 0 0 0 0-5H6.95zM4.5 0h7a3.5 3.5 0 1 1 0 7h-7a3.5 3.5 0 1 1 0-7z" />
+          </svg>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link1" aria-current="page" href="{% url 'index' %} "> Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link1" aria-current="page" href="{% url 'downloads' %}">Downloads</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link1" href="{% url 'holidays' %}">Holidays List</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link1" href="{% url 'contact' %}">Contact Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link1" href="{% url 'map' %}">Route Map</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link1" href="{% url 'related_links' %}">Related Links</a>
+            </li>
+          </ul>
+          <span class="navbar-text"> Navbar text with an inline element </span>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container-fluid main-first">
+      <div class="row">
+        <div class="col-3 common-left-right">
+          <ul class="list-group">
+            <li class="list-group-item active" aria-current="true"
+              style="background-image: linear-gradient(to top,#0e4d92, #c4dbf0);"> GENERAL
+            </li>
+            <li class="list-group-item">
+              <a href="{% url 'about' %} " class="left-body-li">About Us</a>
+            </li>
+            <li class="list-group-item">
+              <a href="{% url 'iec' %}" class="left-body-li">IEC Number</a>
+            </li>
+            <li class="list-group-item">
+              <a href="{% url 'fee' %}" class="left-body-li">Fee Structure</a>
+            </li>
+            <li class="list-group-item">
+              <a href="{% url 'check_list' %}" class="left-body-li">Check Lists</a>
+            </li>
+            <li class="list-group-item" class="left-body-li">
+              <a href="{% url 'aayat_niryaat' %}" class="left-body-li">Aayaat Niryaat Forms</a>
+            </li>
+            <li class="list-group-item" class="left-body-li">
+              <a href="{% url 'status_holders' %}" class="left-body-li">Status Holders</a>
+            </li>
+            <li class="list-group-item" class="left-body-li">
+              <a href="{% url 'application_status' %}" class="left-body-li">Application Status</a>
+            </li>
+            <li class="list-group-item">
+              <a href="{% url 'what_is_new' %}" class="left-body-li"> What is New?</a>
+            </li>
+          
+            <hr>
+            <li class="list-group-item" style="background-image: linear-gradient(to left,#42b2f8, #c4dbf0);">
+ANNOUNCEMENTS
+            </li>
+            <li class="list-group-item">
+              <a href="{% url 'tenders' %}" class="left-body-li">Tenders</a>
+            </li>
+            <li class="list-group-item">
+              <a href="{% url 'trade_notices' %}" class="left-body-li">Trade Notices</a>
+            </li>
+            <li class="list-group-item">
+              <a href="{% url 'eodc' %}" class="left-body-li">EODCs Issued</a>
+            </li>
+            <li class="list-group-item">
+              <a href="{% url 'epcg_authorisations' %}" class="left-body-li">Advance/DFIA/EPCG Authorisations</a>
+            </li>
+            <li class="list-group-item" class="left-body-li">
+              <a href="{% url 'performance' %}" class="left-body-li">Performance</a>
+            </li>
+            <li class="list-group-item" class="left-body-li">
+              <a href="{% url 'major_export' %}" class="left-body-li">Major Export Products</a>
+            </li>
+            <li class="list-group-item" class="left-body-li">
+              <a href="{% url 'commodity_board' %}" class="left-body-li">EPCs/Commodity Boards</a>
+            </li>
+            <li class="list-group-item">
+              <a href="{% url 'photo_gallery' %}" class="left-body-li">Photo Gallery</a>
+            </li>
+            <li class="list-group-item">
+              <a href="{% url 'feedback' %}" class="left-body-li">Feedback</a>
+            </li>
+            <li class="list-group-item">
+              <a href="{% url 'faq' %}" class="left-body-li">FAQs</a>
+            </li>
+          </ul>
+
+        </div>
+    
+        <div class="col-6 common-left-right middle">
+          {% block mid-body %}{% endblock mid-body %}
+        </div>
+
+        <div class="col-3 common-left-right">
+          <ul class="list-group">
+            <li class="list-group-item active" aria-current="true" style="background-image: linear-gradient(to top,#0e4d92, #c4dbf0);">
+
+                POLICY MATTERS
+            </li>
+            <li class="list-group-item">
+              <a href="" class="left-body-li">EXIM Policy</a>
+            </li>
+            <li class="list-group-item">
+              <a href="" class="left-body-li">EXIM Procedures</a>
+            </li>
+            <li class="list-group-item">
+              <a href="" class="left-body-li">FTDR Act</a>
+            </li>
+            <li class="list-group-item">
+              <a href="" class="left-body-li">FTDR Rules</a>
+            </li>
+            <li class="list-group-item">
+              <a href="" class="left-body-li">Notifications</a>
+            </li>
+            <li class="list-group-item">
+              <a href="https://www.facebook.com" class="left-body-li">
+                Public Notices</a>
+            </li>
+            <li class="list-group-item">
+              <a href="" class="left-body-li"> Circulars</a>
+            </li>
+            <li class="list-group-item">
+              <a href="" class="left-body-li"> Trade Notices</a>
+            </li>
+            <li class="list-group-item">
+              <a href="" class="left-body-li"> Export Import Data Bank</a>
+            </li>
+            <li class="list-group-item">
+              <a href="" class="left-body-li"> Exim Bulletin </a>
+            </li>
+<hr>
+            <li class="list-group-item active" aria-current="true" style="background-image: linear-gradient(to left,#42b2f8, #c4dbf0); color: black;">
+
+                USER FACILITATION
+            </li>
+            <li class="list-group-item">
+              <a href="" class="left-body-li"> IEC Online</a>
+            </li>
+            <li class="list-group-item">
+              <a href="" class="left-body-li">View Your IEC</a>
+            </li>
+            <li class="list-group-item">
+              <a href="" class="left-body-li">IEC's Customs Status(BIN)</a>
+            </li>
+            <li class="list-group-item">
+              <a href="" class="left-body-li">IEC's DEL Status</a>
+            </li>
+            <li class="list-group-item">
+              <a href="" class="left-body-li">IEC Online(Help)</a>
+            </li>
+            <li class="list-group-item">
+              <a href="https://www.facebook.com" class="left-body-li">
+                ECOM Application</a>
+            </li>
+            <li class="list-group-item">
+              <a href="" class="left-body-li"> ECOM Application Print</a>
+            </li>
+            <li class="list-group-item">
+              <a href="" class="left-body-li"> ECOM Application (Help)</a>
+            </li>
+            <li class="list-group-item">
+              <a href="" class="left-body-li"> Export Import Data Bank</a>
+            </li>
+            <li class="list-group-item">
+              <a href="" class="left-body-li"> Using DSC (Help) </a>
+            </li>
+            <li class="list-group-item">
+              <a href="" class="left-body-li"> EFT (Help)</a>
+            </li>
+            <li class="list-group-item">
+              <a href="" class="left-body-li"> Getting DSC (Help)</a>
+            </li>
+            <li class="list-group-item">
+              <a href="" class="left-body-li"> DES File Status at DGFT</a>
+            </li>
+            <li class="list-group-item">
+              <a href="" class="left-body-li"> License Status at DGFT</a>
+            </li>
+            <li class="list-group-item">
+              <a href="" class="left-body-li"> License Status at Customs</a>
+            </li>
+            <li class="list-group-item">
+              <a href="" class="left-body-li">  Customs Port Location Codes
+              </a>
+            </li>
+            <li class="list-group-item">
+              <a href="" class="left-body-li"> View Your e-BRCs</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+
+    {% block body %} {% endblock body %}
+
+<hr/>
+    <footer>
+      <div class="container-fluid">
+        <div style="text-align: center">
+          Hosted by National Informatics Centre , Andhra Pradesh State Centre,
+          Hyderabad
+        </div>
+        <span style="font-size: 12px; text-align: center">
+          <span style="color: red"> Disclaimer </span>: Contents published on
+          this website have no legal sanctity and are for general reference
+          only. Visitors to this website are required to refer to the official
+          documents published by DGFT to ascertain the facts.
+        </span>
+      </div>
+    </footer>
+
+    <script src="{% static 'js/bootstrap.js' %}"></script>
+  </body>
+
+</html>

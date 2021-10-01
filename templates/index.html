@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+Welcome to the Official Website of Additional DGFT,Hyderabad
+
+{% endblock title %}
+
+{% block mid-body %}
+<div style="border-top: 2px solid black; border-bottom: 2px solid black; border-radius: 20px;">
+    <br><br><br>
+    <div class="image-center">
+        <img src="{% static 'images/gandhiji.jpg' %}" alt="Photo">
+    </div>
+    <br><br><br><br>
+    <div style="text-align: justify;">
+        A customer is the most important visitor on our premises. he is not dependent on us. We are dependent on him. He
+        is not an interruption in our work. He is the purpose of it. He is not an outsider in our business. He is part
+        of it. We are not doing him a favor by serving him. He is doing us a favor by giving us an opportunity to do so
+    </div>
+    <br> <br>
+    <div style="text-align: right; font-size: 17px;">
+        <b> Mahatama Gandhi</b>
+    </div>
+    <br> <br> <br> <br> <br> <br><br> <br> <br> <br> <br>
+    <div class="image-center">
+        <img src="{% static 'images/bottom.jpg' %}" alt="Photo">
+    </div>
+</div>
+{% endblock mid-body %}
+
+{% block body %}
+coming from index only
+{% endblock body %}
