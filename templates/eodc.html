@@ -1,7 +1,148 @@
 {% extends 'base.html' %}
+{% load static %}
 
-{% block title %}
+
+{% block title %} EODCs Issued
 {% endblock title %}
 
+
+
 {% block mid-body %}
+<br />
+
+<div class="heading">EODCs Issued</div>
+<br />
+<br />
+<div class="container">
+    <ol class="ol-tenders">
+        <a class="ol-li-link" data-bs-toggle="collapse" href="#multiCollapseExample1" role="button"
+            aria-expanded="false" aria-controls="multiCollapseExample1">
+            <li>Advance Authorisations</li>
+        </a>
+
+        <div class="row">
+            <div class="col">
+
+                <div class="collapse multi-collapse" id="multiCollapseExample1"
+                    style="background-image:linear-gradient(to left, rgb(175, 238, 219), rgb(127, 208, 233));">
+                    <div class="card card-body">
+
+                        <div class="container">
+                            <ol class="ol-tenders">
+                                <a href="{% static 'docs/tenders/tend062020.pdf' %}" target="blank" class="ol-li-link">
+                                    <li> September,2017</li>
+                                </a>
+                                <a href="{% static 'docs/tenders/tend062020.pdf' %}" class="ol-li-link">
+                                    <li>
+                                        October,2017
+                                    </li>
+                                </a>
+                                <a href="" class="ol-li-link">
+                                    <li>
+                                        November,2017
+                                    </li>
+                                </a>
+                                <a href="" class="ol-li-link">
+                                    <li>
+                                        December, 2017
+                                    </li>
+                                </a>
+                                <a href="" class="ol-li-link">
+                                    <li>
+                                        January,2018
+                                    </li>
+                                </a>
+                                <a href="" class="ol-li-link">
+                                    <li>
+                                        February,2018
+                                    </li>
+                                </a>
+                                <a href="" class="ol-li-link">
+                                    <li>
+                                        March,2018
+                                    </li>
+                                </a>
+                                <a href="" class="ol-li-link">
+                                    <li>
+                                        April,2018
+                                    </li>
+                                </a>
+                                <a href="" class="ol-li-link">
+                                    <li>
+                                        May,2018
+                                    </li>
+                                </a>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+            <hr />
+            <a class="ol-li-link" data-bs-toggle="collapse" href="#multiCollapseExample2" role="button"
+                aria-expanded="false" aria-controls="multiCollapseExample2">
+                <li>EPCG Authorisations</li>
+            </a>
+            <div class="row">
+                <div class="col"  >
+
+                    <div class="collapse multi-collapse" id="multiCollapseExample2">
+                        <div class="card card-body">
+
+                            <div class="container">
+                                <ol class="ol-tenders">
+                                    <a href="{% static 'docs/tenders/tend062020.pdf' %}" target="blank"
+                                        class="ol-li-link">
+                                        <li> September,2017</li>
+                                    </a>
+                                    <a href="{% static 'docs/tenders/tend062020.pdf' %}" class="ol-li-link">
+                                        <li>
+                                            October,2017
+                                        </li>
+                                    </a>
+                                    <a href="" class="ol-li-link">
+                                        <li>
+                                            November,2017
+                                        </li>
+                                    </a>
+                                    <a href="" class="ol-li-link">
+                                        <li>
+                                            December, 2017
+                                        </li>
+                                    </a>
+                                    <a href="" class="ol-li-link">
+                                        <li>
+                                            January,2018
+                                        </li>
+                                    </a>
+                                    <a href="" class="ol-li-link">
+                                        <li>
+                                            February,2018
+                                        </li>
+                                    </a>
+                                    <a href="" class="ol-li-link">
+                                        <li>
+                                            March,2018
+                                        </li>
+                                    </a>
+                                    <a href="" class="ol-li-link">
+                                        <li>
+                                            April,2018
+                                        </li>
+                                    </a>
+                                    <a href="" class="ol-li-link">
+                                        <li>
+                                            May,2018
+                                        </li>
+                                    </a>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+    </ol>
+</div>
+
 {% endblock mid-body %}

@@ -12,6 +12,29 @@
     <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet" />
     <link href="{% static 'css/first.css' %}" rel="stylesheet" />
 
+    <script>
+			let a;
+			let date;
+			let time;
+			const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+			setInterval(() => {
+				a = new Date();
+        let ap;
+        if (a.getHours() > 12){ 
+          ap = " pm ";
+        }
+        else{
+          ap = " am ";}
+
+				date = a.toLocaleDateString(undefined, options);
+          let hour = (a.getHours() % 12 || 12)<10 ? '0' + (a.getHours() % 12 || 12) :(a.getHours() % 12 || 12);
+          let min = (a.getMinutes())<10 ? '0' + a.getMinutes() : a.getMinutes();
+          let seconds = (a.getSeconds())<10 ? '0' + a.getSeconds() : a.getSeconds();
+				time = hour + ' : ' + min + ' : ' + seconds + ap;
+				document.getElementById('time').innerHTML =time + " | " + date;
+			}, 1000);
+		</script>
+
     <title>{% block title %} {% endblock title %}</title>
   </head>
 
@@ -31,33 +54,41 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarText">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <hr>
             <li class="nav-item">
               <a class="nav-link1" aria-current="page" href="{% url 'index' %} "> Home</a>
             </li>
+            <hr>
             <li class="nav-item">
               <a class="nav-link1" aria-current="page" href="{% url 'downloads' %}">Downloads</a>
             </li>
+            <hr>
             <li class="nav-item">
-              <a class="nav-link1" href="{% url 'holidays' %}">Holidays List</a>
+              <a class="nav-link1" href="{% static 'docs/holidays.pdf' %}" target="_blank">Holidays List</a>
             </li>
+            <hr>
             <li class="nav-item">
               <a class="nav-link1" href="{% url 'contact' %}">Contact Us</a>
             </li>
+            <hr>
             <li class="nav-item">
               <a class="nav-link1" href="{% url 'map' %}">Route Map</a>
             </li>
+            <hr>
             <li class="nav-item">
               <a class="nav-link1" href="{% url 'related_links' %}">Related Links</a>
             </li>
+            <hr>
           </ul>
-          <span class="navbar-text"> Navbar text with an inline element </span>
+          <span class="navbar-text"> <span id="time" style="color: white;">Time
+  </span></span>
         </div>
       </div>
     </nav>
 
     <div class="container-fluid main-first">
       <div class="row">
-        <div class="col-3 common-left-right">
+        <div class="col-lg-3 col-sm-12 common-left-right">
           <ul class="list-group">
             <li class="list-group-item active" aria-current="true"
               style="background-image: linear-gradient(to top,#0e4d92, #c4dbf0);"> GENERAL
@@ -69,7 +100,7 @@
               <a href="{% url 'iec' %}" class="left-body-li">IEC Number</a>
             </li>
             <li class="list-group-item">
-              <a href="{% url 'fee' %}" class="left-body-li">Fee Structure</a>
+              <a href="{% static 'docs/feestruc.pdf' %}" target="_blank" class="left-body-li">Fee Structure</a>
             </li>
             <li class="list-group-item">
               <a href="{% url 'check_list' %}" class="left-body-li">Check Lists</a>
@@ -125,11 +156,11 @@ ANNOUNCEMENTS
 
         </div>
     
-        <div class="col-6 common-left-right middle">
+        <div class="col-lg-6 col-sm-12 common-left-right middle">
           {% block mid-body %}{% endblock mid-body %}
         </div>
 
-        <div class="col-3 common-left-right">
+        <div class="col-lg-3 col-sm-12 common-left-right">
           <ul class="list-group">
             <li class="list-group-item active" aria-current="true" style="background-image: linear-gradient(to top,#0e4d92, #c4dbf0);">
 

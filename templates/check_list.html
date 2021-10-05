@@ -4,4 +4,51 @@
 {% endblock title %}
 
 {% block mid-body %}
+<br />
+<div class="heading"> Checklists </div>
+<br />
+<br />
+<br />
+
+
+
+<div class="container-fluid">
+    <div class="container-fluid">
+        <table class="table table-success table-striped">
+            <tbody>
+                <tr>
+                    <th scope="row">1.</th>
+                   
+                        <td><a href="{% url 'index' %}" class="table-center-link"> Check Sheet-DFCE for Status Holder</a></td>
+                    
+                </tr>
+                <tr>
+                    <th scope="row">2.</th>
+                    <td><a href="{% url 'index' %}" class="table-center-link">Check Sheet for DEPB application</a></td>
+                </tr>
+                <tr>
+                    <th scope="row">3.</th>
+
+                    <td><a href="{% url 'index' %}" class="table-center-link">Check Sheet for application for EPCG Licence</a></td>
+                </tr>
+
+                <tr>
+                    <th> 4. </th>
+                    <td> <a href="{% url 'index' %}" class="table-center-link">Check sheet for application for fresh Importer-Exporter Code</a> </td>
+                </tr>
+
+                <tr>
+                    <th> 5. </th>
+                    <td> <a href="{% url 'index' %}" class="table-center-link">Check sheet for norm fixed cases under Duty Exemption Scheme</a></td>
+                </tr>
+
+                <tr>
+                    <th> 6. </th>
+                    <td> <a href="{% url 'index' %}" class="table-center-link">Check sheet for no norm cases of ADVANCE LICENCE</a> </td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+</div>
 {% endblock mid-body %}

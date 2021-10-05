@@ -1,7 +1,92 @@
 {% extends 'base.html' %}
+ {% block title %} {% endblock title %}
 
-{% block title %}
-{% endblock title %}
 
 {% block mid-body %}
+
+<br />
+
+<div class="heading">FAQs</div>
+<br />
+<br />
+
+<div class="accordion accordion-flush" id="accordionFlushExample">
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="flush-headingOne">
+      <button
+        class="accordion-button collapsed"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#flush-collapseOne"
+        aria-expanded="false"
+        aria-controls="flush-collapseOne"
+      >
+        <b>Q1.</b> How to apply for an IEC?
+      </button>
+    </h2>
+    <div
+      id="flush-collapseOne"
+      class="accordion-collapse collapse"
+      aria-labelledby="flush-headingOne"
+      data-bs-parent="#accordionFlushExample"
+    >
+      <div class="accordion-body">
+        <b>Ans.</b> <br/> An IEC application can be made manually as well as online.
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="flush-headingTwo">
+      <button
+        class="accordion-button collapsed"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#flush-collapseTwo"
+        aria-expanded="false"
+        aria-controls="flush-collapseTwo"
+      >
+         <b>Q2.</b> What is the Procedure for filing Applications manually?
+      </button>
+    </h2>
+    <div
+      id="flush-collapseTwo"
+      class="accordion-collapse collapse"
+      aria-labelledby="flush-headingTwo"
+      data-bs-parent="#accordionFlushExample"
+    >
+      <div class="accordion-body">
+        <b>Ans.</b><br/> An applicant can forward the application either by post or in person to the Jt.Director General of Foreign Trade,1st Floor,Kendriya sadan,Sultan Bazar,Hyderabad.
+
+
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="flush-headingThree">
+      <button
+        class="accordion-button collapsed"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#flush-collapseThree"
+        aria-expanded="false"
+        aria-controls="flush-collapseThree"
+      >
+       <b>Q3.</b>  Is there anybody to guide and assist us?
+      </button>
+    </h2>
+    <div
+      id="flush-collapseThree"
+      class="accordion-collapse collapse"
+      aria-labelledby="flush-headingThree"
+      data-bs-parent="#accordionFlushExample"
+    >
+      <div class="accordion-body">
+        <b>Ans.</b> <br/> Yes. There is a Help Counter at Room No. 152 of Office. The timings are from 09.30AM to 1.00 PM, for submission of applications. For general assistance, the timings are from 09.30AM to 05.30PM.
+      </div>
+    </div>
+    
+  </div>
+    
+</div>
+
 {% endblock mid-body %}

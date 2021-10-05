@@ -1,8 +1,58 @@
 {% extends 'base.html' %}
+{% load static %}
 
-
-{% block title %}
+ 
+{% block title %} Trade Notices
 {% endblock title %}
 
 {% block mid-body %}
+<br />
+
+<div class="heading"> Trade Notices </div>
+<br/>
+<br/>
+<div class="container">
+    <ol class="ol-tenders">
+        <a href="{% static 'docs/trade_notices/tn012020.pdf' %}" target="_blank" class="ol-li-link">
+            <li> Trade Notice- 01 /Dated 31.12.2020 </li>
+        </a>
+        <hr/>
+        <a href="{% static 'docs/tenders/tend062020.pdf' %}" class="ol-li-link">
+        <li>
+            Trade Notice- 02 /Dated 16.05.2019
+        </li>
+    </a>
+    <hr/>
+    <a href="" class="ol-li-link">
+        <li>
+            Trade Notice- 02 /Dated 21.08.2018
+        </li>
+    </a>
+    <hr/>
+    <a href=" {% static 'docs/trade_notices/tn012020.pdf'%} " class="ol-li-link">
+        <li>
+            Trade Notice- 01 /Dated 25.04.2018
+        </li>
+    </a>
+    <hr/>
+    <a href="" class="ol-li-link">
+        <li>
+            Trade Notice- 03 /Dated 04.05.2016
+        </li>
+    </a>
+    <hr/>
+    <a href="" class="ol-li-link">
+        <li>Trade Notice- 02 /Dated 05.04.2016
+        </li>
+    </a>
+    <hr/>
+    <a href="" class="ol-li-link">
+        <li>
+            Trade Notice- 01 /Dated 21.01.2016
+        </li>
+    </a>
+   
+    </ol>
+</div>
+
 {% endblock mid-body %}
